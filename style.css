@@ -3,6 +3,11 @@
 body {
   font-family: "Lato", sans-serif;
   color: #6b1a22;
+  font-size: 1em;
+}
+
+h1{
+  font-size: 2em;
 }
 
 h2 {
@@ -32,7 +37,8 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+  padding: 10px 0px;
 }
 
 /* ---  Groups & Items --- */
@@ -40,6 +46,11 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+}
+.group-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .item {
@@ -57,12 +68,23 @@ header {
   background-color: #83092e;
   padding: 20px 20px 0 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
   font-family: "Tangerine", cursive;
-  font-size: 72px;
+  font-size: 4.5em;
   color: #ecdbc9;
+}
+header nav {
+  margin: 0 auto
+}
+
+header nav ul{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-evenly;
 }
 
 header nav ul li {
@@ -81,6 +103,12 @@ header nav ul li a:hover {
 }
 
 /* -------  Join Form ------- */
+
+h1{
+  text-align: center;
+  padding:20px 0px 10px 0px;
+}
+
 form {
   border: 2px solid #6b1a22;
   padding: 10px;
@@ -118,3 +146,31 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 20px;
+  }
+  header nav {
+    margin: 0;
+  }
+  .logo{
+    font-size: 3em;
+  }
+  #join{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .item {
+    margin-right:0;
+  }
+  .group{
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;
+  }
+}
